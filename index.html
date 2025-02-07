@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Consulta de CNPJs</title>
+</head>
+<body>
+    <header>
+        <h1>Consulta de CPF</h1>
+    </header>
+    <main class="consulta-container">
+        <!-- Formulário para informar o CNPJ -->
+        <div class="form-cnpj">
+            <h2>Informe o CNPJ para realizar a consulta</h2>
+            <form id="cnpjForm">
+                <label for="cnpj">CNPJ:</label>
+                <input type="text" id="cnpj" name="cnpj" placeholder="Digite seu CNPJ..." required>
+
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" name="cpf" placeholder="Digite um ou mais CPFs separados por vírgula...">
+
+                <button type="submit" id="submit">Consultar</button>
+            </form>
+
+            <!-- Campo de busca por CPF (começa oculto) -->
+            <div id="buscar-results" style="display: none;">
+                <label for="searchCpf">Buscar CPF:</label>
+                <input type="text" id="searchCpf" placeholder="Digite um ou mais CPFs separados por vírgula...">
+            </div>
+        </div>
+
+        <!-- Campo de resultado da pesquisa -->
+        <div class="result-pesquisa">
+            <h2>Resultado da consulta</h2>
+            <div id="result">
+                <p>Os CPFs vinculados ao CNPJ aparecerão aqui.</p>
+            </div>
+            <div id="pagination"></div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
