@@ -12,7 +12,7 @@ const apiUrl = "https://api.jae.com.br/vt-gateway/cadastro/consulta"; // URL da 
 const PUBLIC_KEY_PATH = "./public_key.pem"; // Caminho para a chave pública
 
 // Rota POST para autenticação
-app.post('/api/autenticacao', async (req, res) => {
+app.post('/autenticacao', async (req, res) => {
     console.log('Requisição recebida no proxy:', req.body); // Depuração
     try {
         const response = await axios({
